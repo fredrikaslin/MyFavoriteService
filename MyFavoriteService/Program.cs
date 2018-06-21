@@ -10,7 +10,7 @@ namespace MyFavoriteService
     {
         static void Main(string[] args)
         {
-            Console.Write("hejsan Service");
+            Console.WriteLine(args.Length);
             Console.ReadKey();
         }
     }

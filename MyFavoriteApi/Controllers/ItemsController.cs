@@ -8,11 +8,12 @@ namespace MyFavoriteApi.Controllers
 {
     public class ItemsController : ApiController
     {
+        delegate int testDel(int i);
         public IHttpActionResult Get(int id)
         {
-            var item = id * id;
+            testDel delItems = x => x * x;
 
-            return Ok(item);
+            return Ok(delItems(id));
         }
     }
 }

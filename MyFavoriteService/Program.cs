@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -14,7 +15,77 @@ namespace MyFavoriteService
             //RunDelegateTest1();
             //RunExpression();
             //DelegateTest2v2();
-            DelegateTest2v1();
+            //DelegateTest2v1();
+            ToUniversalTimeWithoutAMPM();
+        }
+
+        //TimeZoneTesing
+        public static void ToUniversalTimeWithoutAMPM()
+        {
+            var timeoff = new DateTimeOffset();
+            TimeZoneInfo cst = TimeZoneInfo.FindSystemTimeZoneById("Central Standard Time");
+
+
+            Console.WriteLine(timeoff);
+            Console.WriteLine(cst);
+            Console.ReadKey();
+
+
+
+            //DateTime? date = DateTime.Now;
+            //var utc = date.Value.ToUniversalTime();
+            //var fromDate = utc.ToString("yyyy-MM-d HH:mm:ss") + "z";
+
+
+            //string dateString, format;
+            //DateTime result;
+            //CultureInfo provider = CultureInfo.InvariantCulture;
+
+            //// Parse date-only value with invariant culture.
+            //dateString = "12/3/2018 9:05:21PM";
+            //format = "d";
+            //try
+            //{
+            //    result = DateTime.ParseExact(dateString, format, provider);
+            //    Console.WriteLine("{0} converts to {1}.", dateString, result.ToString());
+            //    Console.ReadKey();
+            //}
+            //catch (FormatException)
+            //{
+            //    Console.WriteLine("{0} is not in the correct format.", dateString);
+            //    Console.ReadKey();
+
+            //}
+
+            //DateTime date1 = new DateTime(2010, 3, 14, 2, 30, 0, DateTimeKind.Local);
+            //Console.WriteLine("Invalid time: {0}",
+            //                  TimeZoneInfo.Local.IsInvalidTime(date1));
+            //Console.ReadKey();
+            //DateTime utcDate1 = date1.ToUniversalTime();
+            //DateTime date2 = utcDate1.ToLocalTime();
+            //Console.WriteLine("{0} --> {1}", date1, date2);
+            //Console.ReadKey();
+
+
+            //string DateFormat = "yyyyMMdHHmmss";
+            //CultureInfo provider = CultureInfo.InvariantCulture;
+
+            //var d = DateTime.ParseExact("11/12/2008 04:20:00pm", DateFormat, provider);
+
+            //Console.WriteLine("DateTime.Parse('16:20')" + d);
+            //Console.ReadKey();
+
+
+
+            //var date = d.ToUniversalTime() + "z";
+
+            //Console.WriteLine("UTC" + date);
+            //Console.ReadKey();
+
+            //string fromDate = d.ToString(DateFormat);
+
+            //Console.WriteLine("DateFormat" + fromDate);
+            //Console.ReadKey();
         }
 
         //expressions

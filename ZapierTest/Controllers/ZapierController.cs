@@ -41,8 +41,6 @@ namespace ZapierTest.Controllers
         [Route("pollme")]
         public List<Message> GenerateMessage()
         {
-            //var time = DateTime.Now.Minute;
-
             var list = new List<Message>();
             for(int index = 0; index < DateTime.Now.Minute; index++)
             {
